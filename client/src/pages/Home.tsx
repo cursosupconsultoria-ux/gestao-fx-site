@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CheckCircle2, AlertTriangle, Zap, Users, BookOpen, Shield } from 'lucide-react';
+import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -23,11 +24,18 @@ import { Button } from '@/components/ui/button';
  */
 
 export default function Home() {
-  const [schedulingOpen, setSchedulingOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
   const handleSchedule = () => {
-    setSchedulingOpen(true);
-    alert('Agendar diagnóstico - Integração em desenvolvimento');
+    setLocation('/contato');
+  };
+
+  const handleNR1Click = () => {
+    setLocation('/nr1');
+  };
+
+  const handleServicesClick = () => {
+    setLocation('/servicos');
   };
 
   const problems = [
@@ -132,7 +140,7 @@ export default function Home() {
           }}
           secondaryCTA={{
             label: 'Entender a NR-1 na Prática',
-            onClick: () => alert('Redirecionando para conteúdo sobre NR-1'),
+            onClick: handleNR1Click,
           }}
         />
 
@@ -229,7 +237,7 @@ export default function Home() {
 
             <div className="text-center">
               <Button
-                onClick={handleSchedule}
+                onClick={handleServicesClick}
                 className="bg-[#1e3a5f] hover:bg-[#152a47] text-white font-semibold px-8 py-6 text-base transition-all duration-200 hover:shadow-lg"
               >
                 Ver Todos os Serviços

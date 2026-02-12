@@ -1,4 +1,5 @@
-import { Shield, Users, Zap, BookOpen, CheckCircle2, Briefcase } from 'lucide-react';
+import { Shield, Users, Zap, BookOpen, CheckCircle2 } from 'lucide-react';
+import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -12,8 +13,10 @@ import { Button } from '@/components/ui/button';
  */
 
 export default function ServicesPage() {
+  const [, setLocation] = useLocation();
+
   const handleSchedule = () => {
-    alert('Agendar diagnóstico - Integração em desenvolvimento');
+    setLocation('/contato');
   };
 
   const services = [
@@ -199,7 +202,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <Briefcase className="w-8 h-8" />,
+                  icon: <CheckCircle2 className="w-8 h-8" />,
                   title: 'Especialização em PMEs',
                   description: 'Conhecemos os desafios únicos de empresas pequenas e oferecemos soluções práticas e acessíveis.',
                 },

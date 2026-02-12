@@ -1,4 +1,5 @@
 import { CheckCircle2, AlertCircle } from 'lucide-react';
+import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -13,8 +14,10 @@ import { Button } from '@/components/ui/button';
  */
 
 export default function NR1Page() {
+  const [, setLocation] = useLocation();
+
   const handleSchedule = () => {
-    alert('Agendar diagnóstico - Integração em desenvolvimento');
+    setLocation('/contato');
   };
 
   const nr1Requirements = [
@@ -120,7 +123,7 @@ export default function NR1Page() {
                   icon={req.icon}
                   title={req.title}
                   description={req.description}
-                  variant="default"
+                  variant={index % 2 === 0 ? 'default' : 'secondary'}
                 />
               ))}
             </div>
@@ -134,10 +137,10 @@ export default function NR1Page() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">
-                Riscos Psicossociais Comuns
+                Riscos Psicossociais
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Identificar e gerenciar riscos psicossociais é essencial para manter equipes saudáveis e produtivas.
+                Identifique e gerencie os fatores que afetam a saúde emocional de sua equipe.
               </p>
             </div>
 
@@ -148,7 +151,7 @@ export default function NR1Page() {
                   icon={risk.icon}
                   title={risk.title}
                   description={risk.description}
-                  variant="accent"
+                  variant={index % 2 === 0 ? 'accent' : 'default'}
                 />
               ))}
             </div>
@@ -157,52 +160,14 @@ export default function NR1Page() {
 
         <WaveDivider variant="primary" />
 
-        {/* IMPLEMENTATION */}
-        <ContentSection
-          title="Como Implementar na Prática"
-          subtitle="Passo a passo para conformidade"
-          image="https://private-us-east-1.manuscdn.com/sessionFile/T5u2kkpTgaK3x8g4w2NTqC/sandbox/L0nYVlrWPKQMEUd24xWNEC-img-5_1770861707000_na1fn_dGVhbS13ZWxsYmVpbmctZ2VzdGFvLWZ4.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvVDV1MmtrcFRnYUszeDhnNHcyTlRxQy9zYW5kYm94L0wwbllWbHJXUEtRTUVVZDI0eFdORUMtaW1nLTVfMTc3MDg2MTcwNzAwMF9uYTFmbl9kR1ZoYlMxM1pXeHNZbVZwYm1jdFoyVnpkR0Z2TFdaNC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=jzEUeBM8i5P-mly3w7KzW~REtwq5h6W-YyYpCX9NicvWEkX6-UMEbe9fkBefvLXotPmgAZuiXUhXWm4mRcN7BZUIGpRV-QPvqhSaOCFAU16DF8GfGkcSXFXJbqi~ZdC5XVmQUHLeiSpc-AtH420vR5dDjftQktaZY7LELVrYBuYoFNGwsBrMBmQws1Dw6M7RCaI-zyGqB72UO0TZqfm57ljZUC-KBq-IXhd71lNJ8Hm~d~wNiUJBW4x~qtW-Q5EtvDIfEXZ4qIigH0R3zdFNT7erC5GJZocx~MeokG-rFBYU-mzUgX6XDKlDV81x~XBe7DHCb9kqbDOWU3BkPzh9Bw__"
-          imagePosition="left"
-          backgroundColor="light"
-          content={
-            <div className="space-y-4">
-              <p className="text-base leading-relaxed">
-                A implementação da NR-1 não precisa ser complicada. Com uma abordagem estruturada e orientada, sua empresa pode estar em conformidade rapidamente.
-              </p>
-              <ol className="space-y-3 list-decimal list-inside">
-                <li className="text-base leading-relaxed">
-                  <strong>Diagnóstico Inicial:</strong> Avalie a situação atual de segurança e saúde
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Política Documentada:</strong> Crie uma política clara e comunicável
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Avaliação de Riscos:</strong> Identifique riscos específicos da sua operação
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Plano de Ação:</strong> Defina ações preventivas e corretivas
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Treinamento:</strong> Capacite sua equipe sobre segurança e saúde
-                </li>
-                <li className="text-base leading-relaxed">
-                  <strong>Monitoramento:</strong> Acompanhe indicadores e resultados continuamente
-                </li>
-              </ol>
-            </div>
-          }
-        />
-
-        <WaveDivider variant="secondary" flip />
-
-        {/* CTA */}
+        {/* CTA FINAL */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152a47] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Pronto para Estar em Conformidade?
+              Pronto para Implementar a NR-1?
             </h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-              Nossa equipe pode ajudar sua empresa a implementar a NR-1 de forma eficiente e prática.
+              Agende um diagnóstico gratuito e descubra como adequar sua empresa à legislação.
             </p>
             <Button
               onClick={handleSchedule}

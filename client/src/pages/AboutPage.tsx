@@ -1,4 +1,5 @@
 import { Heart, Target, Users, Zap } from 'lucide-react';
+import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -13,8 +14,10 @@ import { Button } from '@/components/ui/button';
  */
 
 export default function AboutPage() {
+  const [, setLocation] = useLocation();
+
   const handleSchedule = () => {
-    alert('Agendar diagnóstico - Integração em desenvolvimento');
+    setLocation('/contato');
   };
 
   const values = [
