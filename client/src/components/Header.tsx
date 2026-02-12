@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 
 /**
@@ -12,23 +13,28 @@ import { Button } from '@/components/ui/button';
  */
 
 interface HeaderProps {
-  logo?: string;
   onScheduleClick?: () => void;
 }
 
-export default function Header({ logo, onScheduleClick }: HeaderProps) {
+export default function Header({ onScheduleClick }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location, setLocation] = useLocation();
 
   const navItems = [
-    { label: 'Início', href: '#' },
-    { label: 'Para Pequenas Empresas', href: '#' },
-    { label: 'NR-1 e Riscos Psicossociais', href: '#' },
-    { label: 'Serviços', href: '#' },
-    { label: 'Como Trabalhamos', href: '#' },
-    { label: 'Conteúdos', href: '#' },
-    { label: 'Sobre', href: '#' },
-    { label: 'Contato', href: '#' },
+    { label: 'Início', href: '/' },
+    { label: 'Para Pequenas Empresas', href: '/' },
+    { label: 'NR-1 e Riscos Psicossociais', href: '/nr1' },
+    { label: 'Serviços', href: '/servicos' },
+    { label: 'Como Trabalhamos', href: '/' },
+    { label: 'Conteúdos', href: '/' },
+    { label: 'Sobre', href: '/sobre' },
+    { label: 'Contato', href: '/' },
   ];
+
+  const handleNavClick = (href: string) => {
+    setLocation(href);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -38,12 +44,12 @@ export default function Header({ logo, onScheduleClick }: HeaderProps) {
           <div className="flex items-center justify-between">
             {/* Logo com fundo escuro */}
             <div className="flex items-center gap-3">
-              <div className="bg-[#1e3a5f] rounded-lg p-2 w-12 h-12 flex items-center justify-center">
-                {logo ? (
-                  <img src={logo} alt="Gestão FX" className="w-full h-full object-contain" />
-                ) : (
-                  <span className="text-white font-bold text-sm">FX</span>
-                )}
+              <div className="bg-[#1e3a5f] rounded-lg p-2 w-16 h-16 flex items-center justify-center flex-shrink-0">
+                <img 
+                  src="/logo.png" 
+                  alt="Gestão FX" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-lg font-bold text-[#1e3a5f]">Gestão FX</h1>
@@ -54,13 +60,17 @@ export default function Header({ logo, onScheduleClick }: HeaderProps) {
             {/* Navegação Desktop */}
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-[#1e3a5f] hover:bg-secondary/30 rounded-md transition-colors duration-200"
+                  onClick={() => handleNavClick(item.href)}
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
+                    location === item.href
+                      ? 'text-[#1e3a5f] bg-secondary/30'
+                      : 'text-foreground hover:text-[#1e3a5f] hover:bg-secondary/30'
+                  }`}
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
             </nav>
 
@@ -91,14 +101,17 @@ export default function Header({ logo, onScheduleClick }: HeaderProps) {
           {mobileMenuOpen && (
             <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4 space-y-2">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="block px-3 py-2 text-sm font-medium text-foreground hover:text-[#1e3a5f] hover:bg-secondary/30 rounded-md transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className={`block w-full text-left px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    location === item.href
+                      ? 'text-[#1e3a5f] bg-secondary/30'
+                      : 'text-foreground hover:text-[#1e3a5f] hover:bg-secondary/30'
+                  }`}
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <Button
                 onClick={() => {
