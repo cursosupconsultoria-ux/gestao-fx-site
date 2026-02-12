@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import NR1Page from "./pages/NR1Page";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/nr1" component={NR1Page} />
       <Route path="/servicos" component={ServicesPage} />
       <Route path="/sobre" component={AboutPage} />
+      <Route path="/contato" component={ContactPage} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

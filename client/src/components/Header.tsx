@@ -28,7 +28,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
     { label: 'Como Trabalhamos', href: '/' },
     { label: 'Conteúdos', href: '/' },
     { label: 'Sobre', href: '/sobre' },
-    { label: 'Contato', href: '/' },
+    { label: 'Contato', href: '/contato' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -77,7 +77,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
             {/* CTA + Menu Mobile */}
             <div className="flex items-center gap-2">
               <Button
-                onClick={onScheduleClick}
+                onClick={() => handleNavClick('/contato')}
                 className="hidden sm:inline-flex bg-[#1e3a5f] hover:bg-[#152a47] text-white font-semibold px-6 transition-all duration-200 hover:shadow-md"
               >
                 Agendar Diagnóstico
