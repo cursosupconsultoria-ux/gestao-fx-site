@@ -20,8 +20,8 @@ interface FooterProps {
 
 export default function Footer({
   email = 'contato@gestaofx.com.br',
-  phone = '(11) 9999-9999',
-  address = 'São Paulo, SP',
+  phone = '(19) 98420-7525',
+  address = 'São Paulo / Brasil',
   socialLinks = {},
 }: FooterProps) {
   const currentYear = new Date().getFullYear();
