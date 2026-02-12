@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Google Fonts: Poppins (display/heading) + Inter (body) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,39 +46,44 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Gestão FX: Modernismo Corporativo com Humanidade */
+  /* Primária: Azul profundo (#1e3a5f) - confiança, estabilidade */
+  /* Secundária: Bege/Rosa suave (#e8d4c4, #d4a5a0) - humanidade, acolhimento */
+  /* Acentos: Verde menta (#4a9b7f) - saúde, bem-estar */
+  
+  --primary: #1e3a5f;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #1e3a5f;
+  --sidebar-primary-foreground: #ffffff;
+  --chart-1: #d4a5a0;
+  --chart-2: #1e3a5f;
+  --chart-3: #4a9b7f;
+  --chart-4: #e8d4c4;
+  --chart-5: #c9a89f;
+  --radius: 0.75rem;
+  --background: #fafaf8;
+  --foreground: #2d2d2d;
+  --card: #ffffff;
+  --card-foreground: #2d2d2d;
+  --popover: #ffffff;
+  --popover-foreground: #2d2d2d;
+  --secondary: #e8d4c4;
+  --secondary-foreground: #2d2d2d;
+  --muted: #f0e8e4;
+  --muted-foreground: #6b6b6b;
+  --accent: #d4a5a0;
+  --accent-foreground: #ffffff;
+  --destructive: #d97d4a;
+  --destructive-foreground: #ffffff;
+  --border: #e8ddd8;
+  --input: #f5f1ed;
+  --ring: #1e3a5f;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2d2d2d;
+  --sidebar-accent: #e8d4c4;
+  --sidebar-accent-foreground: #1e3a5f;
+  --sidebar-border: #e8ddd8;
+  --sidebar-ring: #1e3a5f;
 }
 
 .dark {
@@ -119,6 +127,14 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+  h2, h3 {
+    font-weight: 600;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
