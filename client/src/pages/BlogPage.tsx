@@ -266,10 +266,10 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
           <div className="container mx-auto px-4">
             <div className="grid gap-8">
               {articles.map((article) => (
-                <article
+                <a
                   key={article.id}
-                  className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                  onClick={() => onArticleClick(article.id)}
+                  href={`/blog?id=${article.id}`}
+                  className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 block"
                 >
                   <div className="p-8">
                     <div className="mb-4">
@@ -296,7 +296,7 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
                       </div>
                     </div>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
           </div>
@@ -327,15 +327,27 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
 
 // Componente principal
 export default function BlogPage() {
-  const [location, navigate] = useLocation();
+  const [, navigate] = useLocation();
   const [selectedArticleId, setSelectedArticleId] = React.useState<string | null>(null);
 
-  // Extrair ID do artigo da URL
+  // Extrair ID do artigo da URL usando window.location.search
   React.useEffect(() => {
-    const params = new URLSearchParams(location.split('?')[1] || '');
+    const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     setSelectedArticleId(id);
-  }, [location]);
+  }, []);
+
+  // Monitorar mudanças no hash/search
+  React.useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      setSelectedArticleId(id);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   const selectedArticle = selectedArticleId
     ? articles.find((a) => a.id === selectedArticleId)
@@ -356,4 +368,3 @@ export default function BlogPage() {
     />
   );
 }
-
