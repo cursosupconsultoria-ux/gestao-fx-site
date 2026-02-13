@@ -118,13 +118,22 @@ function ArticleView({ article, onBack }: { article: BlogArticle; onBack: () => 
             </div>
             <span className="font-semibold">Gestão FX</span>
           </div>
-          <Button
-            variant="ghost"
-            className="text-white hover:bg-white/10"
-            onClick={onBack}
-          >
-            ← Voltar ao Blog
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              className="text-white hover:bg-white/10"
+              onClick={onBack}
+            >
+              ← Voltar ao Blog
+            </Button>
+            <Button
+              variant="ghost"
+              className="text-white hover:bg-white/10"
+              onClick={() => window.location.href = '/'}
+            >
+              ← Voltar ao Início
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -247,6 +256,13 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
             </div>
             <span className="font-semibold">Gestão FX</span>
           </div>
+          <Button
+            variant="ghost"
+            className="text-white hover:bg-white/10"
+            onClick={() => window.location.href = '/'}
+          >
+            ← Voltar ao Início
+          </Button>
         </div>
       </header>
 
