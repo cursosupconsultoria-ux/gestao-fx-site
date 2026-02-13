@@ -1,5 +1,6 @@
+import React from 'react';
 import { useLocation } from 'wouter';
-import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
+import { Calendar, User, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 /**
@@ -104,137 +105,8 @@ Se sua empresa ainda não está totalmente em conformidade com a NR-1, este é o
   },
 ];
 
-export default function BlogPage() {
-  const [location, navigate] = useLocation();
-  const articleId = new URLSearchParams(location.split('?')[1] || '').get('id');
-  const article = articles.find((a) => a.id === articleId);
-
-  if (article) {
-    return (
-      <div className="min-h-screen flex flex-col bg-white">
-        {/* Header */}
-        <header className="bg-[#1e3a5f] text-white py-4 sticky top-0 z-50">
-          <div className="container mx-auto px-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-[#1e3a5f] font-bold text-lg">FX</span>
-              </div>
-              <span className="font-semibold">Gestão FX</span>
-            </div>
-            <Button
-              variant="ghost"
-              className="text-white hover:bg-white/10"
-              onClick={() => navigate('/blog')}
-            >
-              ← Voltar ao Blog
-            </Button>
-          </div>
-        </header>
-
-        <main className="flex-1">
-          {/* Article Header */}
-          <section className="bg-gradient-to-b from-[#f5f3f0] to-white py-12">
-            <div className="container mx-auto px-4 max-w-3xl">
-              <div className="mb-6">
-                <span className="inline-block px-3 py-1 bg-[#4a9b7f] text-white text-sm font-semibold rounded-full">
-                  {article.category}
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-6 leading-tight">
-                {article.title}
-              </h1>
-              <div className="flex flex-wrap gap-6 text-gray-600">
-                <div className="flex items-center gap-2">
-                  <User className="w-4 h-4" />
-                  <span>{article.author}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>{article.date}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>{article.readTime} min de leitura</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Article Content */}
-          <section className="py-12">
-            <div className="container mx-auto px-4 max-w-3xl">
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-                {article.content.split('\n\n').map((paragraph, index) => {
-                  if (paragraph.startsWith('##')) {
-                    return (
-                      <h2
-                        key={index}
-                        className="text-2xl font-bold text-[#1e3a5f] mt-8 mb-4"
-                      >
-                        {paragraph.replace('## ', '')}
-                      </h2>
-                    );
-                  }
-                  if (paragraph.startsWith('###')) {
-                    return (
-                      <h3
-                        key={index}
-                        className="text-xl font-semibold text-[#1e3a5f] mt-6 mb-3"
-                      >
-                        {paragraph.replace('### ', '')}
-                      </h3>
-                    );
-                  }
-                  if (paragraph.startsWith('-')) {
-                    const items = paragraph.split('\n').filter((line) => line.startsWith('-'));
-                    return (
-                      <ul key={index} className="list-disc list-inside space-y-2 my-4">
-                        {items.map((item, i) => (
-                          <li key={i} className="text-gray-700">
-                            {item.replace('- ', '')}
-                          </li>
-                        ))}
-                      </ul>
-                    );
-                  }
-                  return (
-                    <p key={index} className="mb-4 text-gray-700">
-                      {paragraph}
-                    </p>
-                  );
-                })}
-              </div>
-
-              {/* CTA Section */}
-              <div className="mt-12 p-8 bg-gradient-to-r from-[#1e3a5f] to-[#2a4a7f] rounded-lg text-white">
-                <h3 className="text-2xl font-bold mb-4">
-                  Pronto para implementar a NR-1 na sua empresa?
-                </h3>
-                <p className="mb-6 text-white/90">
-                  Entre em contato conosco para um diagnóstico gratuito e descubra como podemos ajudar sua empresa a estar segura, saudável e em conformidade com a lei.
-                </p>
-                <Button
-                  className="bg-white text-[#1e3a5f] hover:bg-gray-100 font-semibold"
-                  onClick={() => navigate('/contato')}
-                >
-                  Agendar Diagnóstico Gratuito
-                </Button>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        {/* Footer */}
-        <footer className="bg-[#1e3a5f] text-white py-8 mt-12">
-          <div className="container mx-auto px-4 text-center text-white/70">
-            <p>© 2026 Gestão FX. Todos os direitos reservados.</p>
-          </div>
-        </footer>
-      </div>
-    );
-  }
-
-  // Blog List View
+// Componente para exibir um artigo individual
+function ArticleView({ article, onBack }: { article: BlogArticle; onBack: () => void }) {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
@@ -249,10 +121,132 @@ export default function BlogPage() {
           <Button
             variant="ghost"
             className="text-white hover:bg-white/10"
-            onClick={() => navigate('/')}
+            onClick={onBack}
           >
-            ← Voltar ao Início
+            ← Voltar ao Blog
           </Button>
+        </div>
+      </header>
+
+      <main className="flex-1">
+        {/* Article Header */}
+        <section className="bg-gradient-to-b from-[#f5f3f0] to-white py-12">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="mb-6">
+              <span className="inline-block px-3 py-1 bg-[#4a9b7f] text-white text-sm font-semibold rounded-full">
+                {article.category}
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-6 leading-tight">
+              {article.title}
+            </h1>
+            <div className="flex flex-wrap gap-6 text-gray-600">
+              <div className="flex items-center gap-2">
+                <User className="w-4 h-4" />
+                <span>{article.author}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                <span>{article.date}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                <span>{article.readTime} min de leitura</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Article Content */}
+        <section className="py-12">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              {article.content.split('\n\n').map((paragraph, index) => {
+                if (paragraph.trim().startsWith('##')) {
+                  return (
+                    <h2
+                      key={index}
+                      className="text-2xl font-bold text-[#1e3a5f] mt-8 mb-4"
+                    >
+                      {paragraph.trim().replace('## ', '')}
+                    </h2>
+                  );
+                }
+                if (paragraph.trim().startsWith('###')) {
+                  return (
+                    <h3
+                      key={index}
+                      className="text-xl font-semibold text-[#1e3a5f] mt-6 mb-3"
+                    >
+                      {paragraph.trim().replace('### ', '')}
+                    </h3>
+                  );
+                }
+                if (paragraph.trim().startsWith('-')) {
+                  const items = paragraph.split('\n').filter((line) => line.trim().startsWith('-'));
+                  return (
+                    <ul key={index} className="list-disc list-inside space-y-2 my-4">
+                      {items.map((item, i) => (
+                        <li key={i} className="text-gray-700">
+                          {item.trim().replace('- ', '')}
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+                if (paragraph.trim()) {
+                  return (
+                    <p key={index} className="mb-4 text-gray-700">
+                      {paragraph.trim()}
+                    </p>
+                  );
+                }
+                return null;
+              })}
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-12 p-8 bg-gradient-to-r from-[#1e3a5f] to-[#2a4a7f] rounded-lg text-white">
+              <h3 className="text-2xl font-bold mb-4">
+                Pronto para implementar a NR-1 na sua empresa?
+              </h3>
+              <p className="mb-6 text-white/90">
+                Entre em contato conosco para um diagnóstico gratuito e descubra como podemos ajudar sua empresa a estar segura, saudável e em conformidade com a lei.
+              </p>
+              <Button
+                className="bg-white text-[#1e3a5f] hover:bg-gray-100 font-semibold"
+                onClick={onBack}
+              >
+                Agendar Diagnóstico Gratuito
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-[#1e3a5f] text-white py-8 mt-12">
+        <div className="container mx-auto px-4 text-center text-white/70">
+          <p>© 2026 Gestão FX. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+// Componente para listar artigos
+function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void }) {
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      {/* Header */}
+      <header className="bg-[#1e3a5f] text-white py-4 sticky top-0 z-50">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+              <span className="text-[#1e3a5f] font-bold text-lg">FX</span>
+            </div>
+            <span className="font-semibold">Gestão FX</span>
+          </div>
         </div>
       </header>
 
@@ -275,7 +269,7 @@ export default function BlogPage() {
                 <article
                   key={article.id}
                   className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                  onClick={() => navigate(`/blog?id=${article.id}`)}
+                  onClick={() => onArticleClick(article.id)}
                 >
                   <div className="p-8">
                     <div className="mb-4">
@@ -317,12 +311,6 @@ export default function BlogPage() {
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Entre em contato conosco para um diagnóstico gratuito e descubra como podemos ajudar sua empresa.
             </p>
-            <Button
-              className="bg-[#1e3a5f] text-white hover:bg-[#2a4a7f] px-8 py-3 text-lg font-semibold"
-              onClick={() => navigate('/contato')}
-            >
-              Agendar Diagnóstico Gratuito
-            </Button>
           </div>
         </section>
       </main>
@@ -336,3 +324,36 @@ export default function BlogPage() {
     </div>
   );
 }
+
+// Componente principal
+export default function BlogPage() {
+  const [location, navigate] = useLocation();
+  const [selectedArticleId, setSelectedArticleId] = React.useState<string | null>(null);
+
+  // Extrair ID do artigo da URL
+  React.useEffect(() => {
+    const params = new URLSearchParams(location.split('?')[1] || '');
+    const id = params.get('id');
+    setSelectedArticleId(id);
+  }, [location]);
+
+  const selectedArticle = selectedArticleId
+    ? articles.find((a) => a.id === selectedArticleId)
+    : null;
+
+  if (selectedArticle) {
+    return (
+      <ArticleView
+        article={selectedArticle}
+        onBack={() => navigate('/blog')}
+      />
+    );
+  }
+
+  return (
+    <BlogListView
+      onArticleClick={(id) => navigate(`/blog?id=${id}`)}
+    />
+  );
+}
+
