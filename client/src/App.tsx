@@ -9,6 +9,7 @@ import NR1Page from "./pages/NR1Page";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
 
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/servicos" component={ServicesPage} />
       <Route path="/sobre" component={AboutPage} />
       <Route path="/contato" component={ContactPage} />
+      <Route path="/blog" component={BlogPage} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

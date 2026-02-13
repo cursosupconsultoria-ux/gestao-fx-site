@@ -26,7 +26,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
     { label: 'NR-1 e Riscos Psicossociais', href: '/nr1' },
     { label: 'Serviços', href: '/servicos' },
     { label: 'Como Trabalhamos', href: '/' },
-    { label: 'Conteúdos', href: '/' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Sobre', href: '/sobre' },
     { label: 'Contato', href: '/contato' },
   ];
