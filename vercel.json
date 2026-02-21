@@ -1,11 +1,15 @@
 {
   "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/public",
   "framework": "vite",
-  "rewrites": [
+  "env": {
+    "VITE_APP_TITLE": "Gestão FX - Consultoria de RH e NR-1",
+    "VITE_APP_ID": "gestao-fx-site"
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
