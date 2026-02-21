@@ -24,6 +24,247 @@ interface BlogArticle {
 
 const articles: BlogArticle[] = [
   {
+    id: 'gestao-psicossocial-2026',
+    title: 'Gestão Psicossocial: O Diferencial Competitivo das Empresas em 2026',
+    excerpt: 'Descubra como a gestão de riscos psicossociais se tornou essencial para reter talentos, aumentar produtividade e criar uma cultura organizacional humanizada.',
+    author: 'Gestão FX',
+    date: '19 de fevereiro de 2026',
+    readTime: 10,
+    category: 'Gestão de Pessoas',
+    content: `
+A saúde mental no trabalho deixou de ser um tópico secundário. Em 2026, a gestão de riscos psicossociais é um diferencial competitivo que separa empresas que crescem de forma sustentável daquelas que enfrentam alta rotatividade, absenteísmo e problemas legais.
+
+## O que são Riscos Psicossociais?
+
+Riscos psicossociais são fatores relacionados à organização do trabalho que podem afetar a saúde mental e física dos colaboradores. Incluem:
+
+- Sobrecarga de trabalho e prazos irrealistas
+- Falta de autonomia e controle sobre o trabalho
+- Comunicação inadequada e falta de transparência
+- Conflitos interpessoais e assédio moral
+- Falta de reconhecimento e oportunidades de desenvolvimento
+- Insegurança no emprego
+- Desequilíbrio entre vida profissional e pessoal
+
+## Por que as Empresas Devem se Preocupar em 2026?
+
+### 1. Legislação Mais Rigorosa
+
+A NR-1 e a NR-5 agora exigem que as empresas façam diagnósticos de riscos psicossociais. Não cumprir com essas exigências pode resultar em multas significativas.
+
+### 2. Impacto na Produtividade
+
+Colaboradores com problemas de saúde mental têm:
+- 40% menos produtividade
+- Maior taxa de erros
+- Menor engajamento
+- Absenteísmo frequente
+
+### 3. Retenção de Talentos
+
+Os melhores profissionais buscam empresas que cuidam de sua saúde mental. Empresas que negligenciam isso perdem seus talentos para concorrentes.
+
+### 4. Custos Reduzidos
+
+Prevenir problemas de saúde mental é muito mais barato do que lidar com afastamentos, processos judiciais e rotatividade.
+
+## Estratégias de Gestão Psicossocial Eficazes
+
+### 1. Diagnóstico Inicial
+
+Realizar uma avaliação de riscos psicossociais para identificar os principais problemas na organização.
+
+### 2. Comunicação Transparente
+
+Estabelecer canais de comunicação abertos onde colaboradores possam expressar preocupações sem medo de represálias.
+
+### 3. Flexibilidade de Trabalho
+
+Oferecer opções de trabalho remoto, horários flexíveis e respeito aos limites entre vida profissional e pessoal.
+
+### 4. Desenvolvimento e Reconhecimento
+
+Investir em treinamentos, oportunidades de crescimento e reconhecer o trabalho bem feito.
+
+### 5. Suporte Psicológico
+
+Oferecer acesso a psicólogos, programas de bem-estar e espaços para descompressão.
+
+### 6. Liderança Humanizada
+
+Capacitar gestores para liderar com empatia, ouvindo e apoiando seus times.
+
+## Casos de Sucesso
+
+Empresas que implementaram gestão psicossocial eficaz relatam:
+- Redução de 35% no absenteísmo
+- Aumento de 45% na retenção de talentos
+- Melhoria de 50% no clima organizacional
+- Redução de 60% em problemas legais relacionados a saúde mental
+
+## Como Começar
+
+Não é necessário implementar tudo de uma vez. Comece com:
+1. Diagnóstico de riscos psicossociais
+2. Comunicação clara sobre as ações que serão tomadas
+3. Implementação gradual de melhorias
+4. Acompanhamento contínuo e ajustes
+
+## Conclusão
+
+A gestão psicossocial não é apenas uma obrigação legal. É um investimento no futuro da sua empresa. Empresas que cuidam da saúde mental de seus colaboradores têm:
+- Colaboradores mais engajados e produtivos
+- Melhor reputação no mercado
+- Menor rotatividade
+- Menos problemas legais
+- Cultura organizacional mais forte
+
+Em 2026, a pergunta não é mais "por que investir em gestão psicossocial?", mas sim "como não posso deixar de investir?"
+    `,
+  },
+  {
+    id: 'tendencias-rh-2026',
+    title: 'Tendências de RH para 2026: O que Esperar',
+    excerpt: 'Trabalho híbrido, IA na gestão de pessoas, DEI e desenvolvimento contínuo. Conheça as principais tendências que vão transformar a gestão de RH em 2026.',
+    author: 'Gestão FX',
+    date: '14 de fevereiro de 2026',
+    readTime: 9,
+    category: 'Tendências',
+    content: `
+2026 promete ser um ano de transformação para a gestão de Recursos Humanos. As empresas que se adaptarem rapidamente a essas tendências estarão melhor posicionadas para atrair, reter e desenvolver talentos.
+
+## 1. Consolidação do Trabalho Híbrido
+
+### O Novo Normal
+
+O trabalho híbrido não é mais uma exceção. É a norma. Em 2026, espera-se que:
+- 70% das empresas ofereçam alguma forma de flexibilidade
+- Colaboradores exijam autonomia sobre onde trabalhar
+- Escritórios se transformem em espaços de colaboração, não de permanência
+
+### Desafios
+
+- Manter a cultura organizacional com equipes dispersas
+- Garantir equidade entre colaboradores presenciais e remotos
+- Comunicação eficaz em diferentes fusos horários
+
+### Oportunidades
+
+- Acesso a talentos globais
+- Redução de custos com infraestrutura
+- Melhor equilíbrio entre vida profissional e pessoal
+
+## 2. IA na Gestão de Pessoas
+
+### Aplicações Práticas
+
+- **Recrutamento:** IA para análise de currículos e identificação de candidatos ideais
+- **Desenvolvimento:** Planos de carreira personalizados com base em dados
+- **Retenção:** Identificação de colaboradores em risco de sair
+- **Análise de Desempenho:** Feedback contínuo e objetivos alinhados
+
+### Cuidados
+
+- Evitar vieses algorítmicos
+- Manter a humanidade nas decisões
+- Transparência sobre como a IA é usada
+
+## 3. Diversidade, Equidade e Inclusão (DEI)
+
+### Além da Obrigação Legal
+
+DEI deixou de ser apenas uma questão de conformidade. É agora um fator de competitividade:
+- Empresas diversas têm 35% mais inovação
+- Equipes inclusivas têm 17% mais produtividade
+- Candidatos buscam empresas com compromisso real com DEI
+
+### Ações Concretas
+
+- Programas de mentoria para minorias
+- Revisão de políticas de contratação e promoção
+- Treinamentos sobre inconsciente coletivo
+- Representatividade em posições de liderança
+
+## 4. Desenvolvimento Contínuo
+
+### Aprendizado ao Longo da Vida
+
+Com a velocidade de mudança tecnológica, o aprendizado não termina mais na contratação. Em 2026:
+- Empresas investem em programas de upskilling e reskilling
+- Plataformas de aprendizado personalizado ganham espaço
+- Mentoria e coaching se tornam práticas comuns
+
+### Benefícios
+
+- Colaboradores mais engajados
+- Redução de rotatividade
+- Maior capacidade de adaptação às mudanças
+
+## 5. Bem-estar Integral
+
+### Além da Saúde Física
+
+Empresas reconhecem que bem-estar inclui:
+- Saúde mental e psicológica
+- Equilíbrio entre vida profissional e pessoal
+- Desenvolvimento pessoal e profissional
+- Propósito e significado no trabalho
+
+### Iniciativas
+
+- Programas de saúde mental
+- Flexibilidade de horários
+- Espaços de descompressão
+- Voluntariado corporativo
+
+## 6. Transparência Salarial
+
+### Tendência Global
+
+Cada vez mais empresas publicam faixas salariais em anúncios de emprego. Isso:
+- Reduz disparidades salariais
+- Aumenta confiança nos processos de seleção
+- Atrai candidatos mais qualificados
+
+## 7. Gestão de Desempenho Contínua
+
+### Adeus às Avaliações Anuais
+
+Avaliações anuais estão sendo substituídas por:
+- Feedback contínuo
+- Conversas regulares sobre desenvolvimento
+- Objetivos alinhados e revisados regularmente
+- Reconhecimento em tempo real
+
+## Como se Preparar para 2026
+
+### Passo 1: Diagnóstico
+Avalie onde sua empresa está em relação a essas tendências.
+
+### Passo 2: Priorização
+Defina quais tendências são mais relevantes para seu negócio.
+
+### Passo 3: Planejamento
+Crie um plano de ação com prazos e responsáveis.
+
+### Passo 4: Implementação
+Comece com pilotos e expanda gradualmente.
+
+### Passo 5: Acompanhamento
+Meça resultados e ajuste conforme necessário.
+
+## Conclusão
+
+As tendências de RH em 2026 refletem uma mudança fundamental: o reconhecimento de que pessoas são o ativo mais valioso das empresas. Organizações que abraçarem essas tendências estarão melhor posicionadas para:
+- Atrair os melhores talentos
+- Reter colaboradores engajados
+- Aumentar produtividade e inovação
+- Criar uma cultura organizacional forte
+
+O futuro do RH é agora. A pergunta é: sua empresa está pronta?
+    `,
+  },
+  {
     id: 'nr1-importance',
     title: 'A Importância da NR-1 para Pequenas e Médias Empresas',
     excerpt: 'Entenda por que a NR-1 é fundamental para a conformidade legal e o bem-estar dos colaboradores em empresas de pequeno e médio porte.',
