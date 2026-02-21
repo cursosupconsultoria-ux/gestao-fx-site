@@ -15,10 +15,15 @@
       ]
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "^/assets/.*",
+      "dest": "/$0",
+      "continue": true
+    },
+    {
+      "src": "^/.*",
+      "dest": "/index.html"
     }
   ]
 }
