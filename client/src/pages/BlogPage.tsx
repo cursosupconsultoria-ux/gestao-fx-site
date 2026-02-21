@@ -284,7 +284,7 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
               {articles.map((article) => (
                 <a
                   key={article.id}
-                  href={`/blog?id=${article.id}`}
+                  href={`/blog/${article.id}`}
                   className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 block"
                 >
                   <div className="p-8">
@@ -342,28 +342,19 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
 }
 
 // Componente principal
-export default function BlogPage() {
+export default function BlogPage(props: any) {
   const [, navigate] = useLocation();
   const [selectedArticleId, setSelectedArticleId] = React.useState<string | null>(null);
 
-  // Extrair ID do artigo da URL usando window.location.search
   React.useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    setSelectedArticleId(id);
-  }, []);
-
-  // Monitorar mudanças no hash/search
-  React.useEffect(() => {
-    const handlePopState = () => {
+    if (props.params?.id) {
+      setSelectedArticleId(props.params.id);
+    } else {
       const params = new URLSearchParams(window.location.search);
       const id = params.get('id');
       setSelectedArticleId(id);
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+    }
+  }, [props.params?.id]);
 
   const selectedArticle = selectedArticleId
     ? articles.find((a) => a.id === selectedArticleId)
@@ -380,7 +371,7 @@ export default function BlogPage() {
 
   return (
     <BlogListView
-      onArticleClick={(id) => navigate(`/blog?id=${id}`)}
+      onArticleClick={(id) => navigate(`/blog/${id}`)}
     />
   );
 }

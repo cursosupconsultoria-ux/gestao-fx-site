@@ -20,6 +20,7 @@ function Router() {
       <Route path="/servicos" component={ServicesPage} />
       <Route path="/sobre" component={AboutPage} />
       <Route path="/contato" component={ContactPage} />
+      <Route path="/blog/:id" component={BlogPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
