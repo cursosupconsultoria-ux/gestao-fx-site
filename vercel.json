@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "env": {
+    "VITE_APP_TITLE": "Gestão FX - Consultoria de RH e NR-1",
+    "VITE_APP_ID": "gestao-fx-site"
+  }
+}
