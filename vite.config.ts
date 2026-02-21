@@ -79,25 +79,13 @@ function vitePluginManusDebugCollector(): Plugin {
     name: "manus-debug-collector",
 
     transformIndexHtml(html) {
-      if (process.env.NODE_ENV === "production") {
-        return html;
-      }
-      return {
-        html,
-        tags: [
-          {
-            tag: "script",
-            attrs: {
-              src: "/__manus__/debug-collector.js",
-              defer: true,
-            },
-            injectTo: "head",
-          },
-        ],
-      };
+      // Disable debug collector in production
+      return html;
     },
 
     configureServer(server: ViteDevServer) {
+      // Only configure in dev mode
+      if (process.env.NODE_ENV === "production") return;
       // POST /__manus__/logs: Browser sends logs (written directly to files)
       server.middlewares.use("/__manus__/logs", (req, res, next) => {
         if (req.method !== "POST") {
