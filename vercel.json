@@ -2,14 +2,23 @@
   "buildCommand": "pnpm build",
   "outputDirectory": "dist/public",
   "framework": "vite",
-  "env": {
-    "VITE_APP_TITLE": "Gestão FX - Consultoria de RH e NR-1",
-    "VITE_APP_ID": "gestao-fx-site"
-  },
-  "routes": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
