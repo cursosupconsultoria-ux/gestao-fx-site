@@ -284,7 +284,7 @@ function BlogListView({ onArticleClick }: { onArticleClick: (id: string) => void
               {articles.map((article) => (
                 <a
                   key={article.id}
-                  href={`/blog/${article.id}`}
+                  href={`/blog?id=${article.id}`}
                   className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 block"
                 >
                   <div className="p-8">
@@ -371,7 +371,7 @@ export default function BlogPage(props: any) {
 
   return (
     <BlogListView
-      onArticleClick={(id) => navigate(`/blog/${id}`)}
+      onArticleClick={(id) => navigate(`/blog?id=${id}`)}
     />
   );
 }
