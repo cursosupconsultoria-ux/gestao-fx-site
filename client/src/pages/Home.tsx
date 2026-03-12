@@ -279,6 +279,53 @@ export default function Home() {
 
         <WaveDivider variant="secondary" flip />
 
+        {/* JORNALZINHO RH CTA */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-[#4a9b7f] to-[#2d7a5f] text-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Acompanhe as Novidades de RH
+                </h2>
+                <p className="text-lg text-white/90 mb-6">
+                  Receba semanalmente as principais atualizações sobre legislação trabalhista, tendências de RH, gestão de pessoas e conformidade com a NR-1. Conteúdo prático e aplicável para pequenas empresas.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    onClick={() => window.open('https://jornalrh.gestaofx.com.br', '_blank')}
+                    className="bg-white hover:bg-[#f5f1ed] text-[#4a9b7f] font-semibold px-8 py-6 text-base transition-all duration-200 hover:shadow-lg"
+                  >
+                    Acessar Jornalzinho RH
+                  </Button>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+                <h3 className="text-xl font-bold mb-4">O que você encontra:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span>Atualizações de legislação trabalhista</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span>Tendências e novidades de RH</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span>Dicas práticas de gestão de pessoas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span>Conformidade com NR-1 e segurança</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <WaveDivider variant="primary" />
+
         {/* CTA FINAL */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#152a47] text-white">
           <div className="container mx-auto px-4 text-center">
