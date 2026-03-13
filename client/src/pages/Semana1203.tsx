@@ -1,4 +1,4 @@
-import { AlertCircle, CheckCircle2, TrendingUp, Clock, Heart, Download, Share2, Mail, MessageCircle, Zap, FileText, Scale, ShieldCheck, BarChart3 } from "lucide-react";
+import { AlertCircle, CheckCircle2, TrendingUp, Clock, Heart, Download, Share2, Mail, MessageCircle, Zap, FileText, Scale, ShieldCheck, BarChart3, Users } from "lucide-react";
 import { useRef, useState } from "react";
 
 export default function Semana1203() {
@@ -50,7 +50,7 @@ export default function Semana1203() {
               Baixar PDF
             </button>
             <button
-              onClick={() => setShowShareForm(!shareShareForm)}
+              onClick={() => setShowShareForm(!showShareForm)}
               className="flex items-center gap-2 bg-[#f97316] text-white px-4 py-2 rounded-lg hover:bg-[#d96300] transition-colors font-semibold text-sm"
             >
               <Share2 className="w-5 h-5" />
