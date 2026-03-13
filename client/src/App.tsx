@@ -15,6 +15,7 @@ import Semana1102 from "./pages/Semana1102";
 import Semana1902 from "./pages/Semana1902";
 import Semana2602 from "./pages/Semana2602";
 import Semana0403 from "./pages/Semana0403";
+import Semana1203 from "./pages/Semana1203";
 
 
 
@@ -33,6 +34,7 @@ function Router() {
       <Route path="/novidades-rh/semana-19-02" component={Semana1902} />
       <Route path="/novidades-rh/semana-26-02" component={Semana2602} />
       <Route path="/novidades-rh/semana-04-03" component={Semana0403} />
+      <Route path="/novidades-rh/semana-12-03" component={Semana1203} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

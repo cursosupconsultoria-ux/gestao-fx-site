@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight, Calendar, FileText } from "lucide-react";
+import { ArrowRight, Calendar, FileText, Home } from "lucide-react";
 
 /**
  * Design Philosophy: Editorial Corporativo Sofisticado
@@ -11,10 +11,24 @@ import { ArrowRight, Calendar, FileText } from "lucide-react";
 export default function Index() {
   const editions = [
     {
+      week: "Semana 12/03/2026",
+      date: "12 de março de 2026",
+      path: "/novidades-rh/semana-12-03",
+      status: "Última edição",
+      highlights: [
+        "STF e SAT: Afastada cobrança sobre autônomos antes de 1998",
+        "Gasto Recorde: Empresas pagam R$ 50,7 bi em ações em 2025",
+        "Empregos em Alta: Brasil gera 112,3 mil vagas em janeiro",
+        "Tendência 2026: Gestão comportamental como foco do RH",
+      ],
+      color: "from-[#1e3a8a] to-[#3b82f6]",
+      statusBg: "bg-blue-100 text-[#1e3a8a]",
+    },
+    {
       week: "Semana 04/03/2026",
       date: "04 de março de 2026",
       path: "/novidades-rh/semana-04-03",
-      status: "Última edição",
+      status: "Edição anterior",
       highlights: [
         "Redução da Jornada: Governo defende 40 horas semanais",
         "Custo Bilionário: R$ 50,6 bilhões em ações trabalhistas em 2025",
@@ -73,6 +87,14 @@ export default function Index() {
       {/* Header */}
       <div className="bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] text-white py-8 px-4">
         <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <Link href="/">
+              <a className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm font-medium">
+                <Home className="w-4 h-4" />
+                Página Inicial do Site
+              </a>
+            </Link>
+          </div>
           <div className="flex items-center gap-4 mb-6">
             <img
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663324672414/lKNFbgfUdlfSXjAJ.png"
@@ -183,7 +205,7 @@ export default function Index() {
               </p>
             </div>
           <p className="mt-2">
-            Próxima edição: <strong>05 de março de 2026</strong>
+            Próxima edição: <strong>19 de março de 2026</strong>
           </p>
         </section>
       </div>

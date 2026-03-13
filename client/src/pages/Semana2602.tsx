@@ -38,7 +38,7 @@ export default function Semana2602() {
       {/* Action Bar */}
       <div className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="/" className="text-[#1e3a8a] font-semibold hover:underline flex items-center gap-2">
+          <a href="/novidades-rh" className="text-[#1e3a8a] font-semibold hover:underline flex items-center gap-2">
             ← Voltar ao Índice
           </a>
           <div className="flex items-center gap-3">
