@@ -11,10 +11,24 @@ import { ArrowRight, Calendar, FileText } from "lucide-react";
 export default function Index() {
   const editions = [
     {
+      week: "Semana 04/03/2026",
+      date: "04 de março de 2026",
+      path: "/novidades-rh/semana-04-03",
+      status: "Última edição",
+      highlights: [
+        "Redução da Jornada: Governo defende 40 horas semanais",
+        "Custo Bilionário: R$ 50,6 bilhões em ações trabalhistas em 2025",
+        "Assédio Moral: Aumento de 22% nos processos",
+        "Transparência Salarial: Prazo encerrado em 28/02",
+      ],
+      color: "from-[#1e3a8a] to-[#3b82f6]",
+      statusBg: "bg-blue-100 text-[#1e3a8a]",
+    },
+    {
       week: "Semana 26/02/2026",
       date: "26 de fevereiro de 2026",
       path: "/novidades-rh/semana-26-02",
-      status: "Última edição",
+      status: "Edição anterior",
       highlights: [
         "Prorrogação de 90 Dias: Trabalho em Feriados (5ª vez)",
         "Habilidades de RH 2026 - LinkedIn identifica 5 competências críticas",
