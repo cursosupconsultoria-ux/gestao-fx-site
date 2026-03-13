@@ -1,4 +1,4 @@
-import { AlertCircle, CheckCircle2, TrendingUp, Clock, Heart, Download, Share2, Mail, MessageCircle, Zap, FileText, Scale, ShieldCheck, BarChart3, Users } from "lucide-react";
+import { AlertCircle, CheckCircle2, TrendingUp, Clock, Heart, Download, Share2, Mail, MessageCircle, Zap, FileText, Scale, ShieldCheck, BarChart3, Users, ExternalLink } from "lucide-react";
 import { useRef, useState } from "react";
 
 export default function Semana1203() {
@@ -156,53 +156,65 @@ export default function Semana1203() {
             Destaques da Semana
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-[#1e3a8a] to-[#3b82f6] rounded-lg p-6 text-white shadow-lg">
+            <a href="https://noticias.stf.jus.br/postsnoticias/stf-afasta-cobranca-do-seguro-de-acidente-de-trabalho-sobre-autonomos-antes-de-emenda-constitucional-de-1998/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#1e3a8a] to-[#3b82f6] rounded-lg p-6 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] group">
               <div className="flex items-start gap-4">
                 <ShieldCheck className="w-8 h-8 flex-shrink-0 text-white" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">STF e Seguro Acidente</h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-bold text-lg">STF e Seguro Acidente</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
                   <p className="text-sm opacity-90">
                     STF afasta cobrança de SAT sobre autônomos antes da Emenda de 1998.
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-gradient-to-br from-[#f97316] to-[#fb923c] rounded-lg p-6 text-white shadow-lg">
+            <a href="https://www.estadao.com.br/economia/empresas-gastam-50-bi-acoes-trabalhistas-2025/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#f97316] to-[#fb923c] rounded-lg p-6 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] group">
               <div className="flex items-start gap-4">
                 <Scale className="w-8 h-8 flex-shrink-0 text-white" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Gasto Recorde em Ações</h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-bold text-lg">Gasto Recorde em Ações</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
                   <p className="text-sm opacity-90">
                     Empresas pagaram R$ 50,7 bilhões em ações trabalhistas em 2025.
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-gradient-to-br from-[#10b981] to-[#34d399] rounded-lg p-6 text-white shadow-lg">
+            <a href="https://g1.globo.com/economia/noticia/2026/03/03/brasil-cria-1123-mil-empregos-formais-em-janeiro-com-forte-queda-de-27percent-frente-ao-mesmo-mes-de-2025.ghtml" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#10b981] to-[#34d399] rounded-lg p-6 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] group">
               <div className="flex items-start gap-4">
                 <BarChart3 className="w-8 h-8 flex-shrink-0 text-white" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Saldo de Empregos</h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-bold text-lg">Saldo de Empregos</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
                   <p className="text-sm opacity-90">
                     Brasil gera 112,3 mil novos empregos formais em janeiro de 2026.
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className="bg-gradient-to-br from-[#8b5cf6] to-[#a78bfa] rounded-lg p-6 text-white shadow-lg">
+            <a href="https://solides.com.br/blog/tendencias-no-rh/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#8b5cf6] to-[#a78bfa] rounded-lg p-6 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] group">
               <div className="flex items-start gap-4">
                 <Users className="w-8 h-8 flex-shrink-0 text-white" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Gestão Comportamental</h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-bold text-lg">Gestão Comportamental</h3>
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
                   <p className="text-sm opacity-90">
                     Tendência 2026: Foco no perfil comportamental para retenção de talentos.
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </section>
 
@@ -218,17 +230,23 @@ export default function Semana1203() {
               <p className="text-gray-700 mb-4">
                 O Supremo Tribunal Federal validou que a cobrança do Seguro de Acidente de Trabalho (SAT) sobre a remuneração de autônomos só é devida após a Emenda Constitucional de 1998.
               </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
                 <li>Decisão protege empresas de cobranças retroativas indevidas</li>
                 <li>Reforça a necessidade de base legal expressa para contribuições</li>
                 <li>Impacto direto no planejamento tributário-trabalhista</li>
               </ul>
+              <a href="https://www.conjur.com.br/2026-mar-12/stf-afasta-contribuicao-ao-sat-em-pagamentos-a-autonomos-antes-de-1998/" target="_blank" rel="noopener noreferrer" className="text-[#1e3a8a] font-semibold hover:underline flex items-center gap-1">
+                Ver análise jurídica completa <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
             <div className="p-4 bg-orange-50 border-l-4 border-orange-500 rounded">
               <h4 className="font-bold text-orange-800 mb-1">Alerta: R$ 50,7 Bilhões em Ações Trabalhistas</h4>
-              <p className="text-orange-700 text-sm">
+              <p className="text-orange-700 text-sm mb-3">
                 O valor pago pelas empresas em 2025 bateu recorde histórico. O STF discute agora critérios mais rígidos para a gratuidade da justiça, visando reduzir o volume de ações sem comprovação de insuficiência econômica.
               </p>
+              <a href="https://www.conjur.com.br/2026-mar-10/recorde-de-indenizacoes-trabalhistas/" target="_blank" rel="noopener noreferrer" className="text-orange-800 font-bold text-xs hover:underline flex items-center gap-1">
+                Acesse os dados oficiais <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </div>
         </section>

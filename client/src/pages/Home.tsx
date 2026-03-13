@@ -292,7 +292,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
-                    onClick={() => window.open('https://jornalrh.gestaofx.com.br', '_blank')}
+                    onClick={() => setLocation('/novidades-rh')}
                     className="bg-white hover:bg-[#f5f1ed] text-[#4a9b7f] font-semibold px-8 py-6 text-base transition-all duration-200 hover:shadow-lg"
                   >
                     Acessar Jornalzinho RH
