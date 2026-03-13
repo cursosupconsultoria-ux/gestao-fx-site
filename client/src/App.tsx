@@ -10,6 +10,10 @@ import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
+import NewsletterHome from "./pages/NewsletterHome";
+import Semana1102 from "./pages/Semana1102";
+import Semana1902 from "./pages/Semana1902";
+import Semana2602 from "./pages/Semana2602";
 
 
 function Router() {
@@ -22,6 +26,10 @@ function Router() {
       <Route path="/contato" component={ContactPage} />
       <Route path="/blog/:id" component={BlogPage} />
       <Route path="/blog" component={BlogPage} />
+      <Route path="/novidades-rh" component={NewsletterHome} />
+      <Route path="/novidades-rh/semana-11-02" component={Semana1102} />
+      <Route path="/novidades-rh/semana-19-02" component={Semana1902} />
+      <Route path="/novidades-rh/semana-26-02" component={Semana2602} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

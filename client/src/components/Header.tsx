@@ -27,7 +27,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
     { label: 'Serviços', href: '/servicos' },
     { label: 'Como Trabalhamos', href: '/' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Novidades RH', href: 'https://jornalrh.gestaofx.com.br', isExternal: true },
+    { label: 'Novidades RH', href: '/novidades-rh' },
     { label: 'Sobre', href: '/sobre' },
     { label: 'Contato', href: '/contato' },
   ];
