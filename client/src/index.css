@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Google Fonts: Poppins (display/heading) + Inter (body) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+/* Google Fonts: Montserrat (display/heading) + Inter (body) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -46,44 +46,45 @@
 }
 
 :root {
-  /* Gestão FX: Modernismo Corporativo com Humanidade */
-  /* Primária: Azul profundo (#1e3a5f) - confiança, estabilidade */
-  /* Secundária: Bege/Rosa suave (#e8d4c4, #d4a5a0) - humanidade, acolhimento */
-  /* Acentos: Verde menta (#4a9b7f) - saúde, bem-estar */
+  /* Gestão FX 2.0: Premium & Clean Design */
+  /* Primária: Azul Marinho (#1e3a8a) - Confiança, Profissionalismo */
+  /* Secundária: Verde Sálvia (#059669) - Saúde, Equilíbrio */
+  /* Terciária: Cinza Grafite (#374151) - Profissionalismo, Sofisticação */
+  /* Fundos: Branco (#ffffff) - Clean, Legibilidade */
   
-  --primary: #1e3a5f;
+  --primary: #1e3a8a;
   --primary-foreground: #ffffff;
-  --sidebar-primary: #1e3a5f;
+  --sidebar-primary: #1e3a8a;
   --sidebar-primary-foreground: #ffffff;
-  --chart-1: #d4a5a0;
-  --chart-2: #1e3a5f;
-  --chart-3: #4a9b7f;
-  --chart-4: #e8d4c4;
-  --chart-5: #c9a89f;
-  --radius: 0.75rem;
-  --background: #fafaf8;
-  --foreground: #2d2d2d;
+  --chart-1: #059669;
+  --chart-2: #1e3a8a;
+  --chart-3: #374151;
+  --chart-4: #10b981;
+  --chart-5: #047857;
+  --radius: 0.5rem;
+  --background: #ffffff;
+  --foreground: #1f2937;
   --card: #ffffff;
-  --card-foreground: #2d2d2d;
+  --card-foreground: #1f2937;
   --popover: #ffffff;
-  --popover-foreground: #2d2d2d;
-  --secondary: #e8d4c4;
-  --secondary-foreground: #2d2d2d;
-  --muted: #f0e8e4;
-  --muted-foreground: #6b6b6b;
-  --accent: #d4a5a0;
+  --popover-foreground: #1f2937;
+  --secondary: #059669;
+  --secondary-foreground: #ffffff;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #10b981;
   --accent-foreground: #ffffff;
-  --destructive: #d97d4a;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e8ddd8;
-  --input: #f5f1ed;
-  --ring: #1e3a5f;
+  --border: #e5e7eb;
+  --input: #f9fafb;
+  --ring: #1e3a8a;
   --sidebar: #ffffff;
-  --sidebar-foreground: #2d2d2d;
-  --sidebar-accent: #e8d4c4;
-  --sidebar-accent-foreground: #1e3a5f;
-  --sidebar-border: #e8ddd8;
-  --sidebar-ring: #1e3a5f;
+  --sidebar-foreground: #1f2937;
+  --sidebar-accent: #059669;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #1e3a8a;
 }
 
 .dark {
@@ -128,13 +129,18 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    line-height: 1.6;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    line-height: 1.3;
   }
   h2, h3 {
     font-weight: 600;
+  }
+  p {
+    line-height: 1.6;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

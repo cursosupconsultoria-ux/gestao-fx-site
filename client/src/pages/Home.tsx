@@ -212,109 +212,109 @@ export default function Home() {
 
         <WaveDivider variant="accent" flip />
 
-        {/* HUB DE SERVIÇOS - 4 CARDS ESTRATÉGICOS */}
+        {/* HUB DE SERVIÇOS - 4 PILARES */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-4">
-                Hub de Serviços
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-4 font-montserrat">
+                Nossos Serviços
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Soluções estratégicas desenhadas para transformar sua gestão de pessoas e impulsionar o crescimento sustentável.
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Soluções estratégicas desenhadas para transformar sua gestão de pessoas, saúde mental e desenvolvimento de liderança.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
               {/* Card 1: Consultoria RH */}
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-[#1e3a8a] group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-[#1e3a8a] group">
                 <div className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="bg-[#1e3a8a] text-white p-3 rounded-lg flex-shrink-0">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-[#1e3a8a] text-white p-3 rounded-md flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Users className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1">Estruturação de RH Generalista</h3>
-                      <p className="text-sm text-gray-600 font-medium">Consultoria de RH para Pequenas Empresas</p>
+                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1 font-montserrat">Consultoria de RH</h3>
+                      <p className="text-sm text-gray-600">Soluções para pequenas empresas sem RH estruturado</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Transforme sua gestão de pessoas. Soluções práticas em subsistemas de RH, conformidade e processos para empresas que buscam crescimento sólido sem a necessidade de um departamento interno fixo.
+                  <p className="text-gray-700 mb-8 leading-relaxed">
+                    Transforme sua gestão de pessoas. Soluções práticas em subsistemas de RH, conformidade e processos para empresas que buscam crescimento sólido.
                   </p>
                   <Button
                     onClick={handleSchedule}
-                    className="w-full bg-[#1e3a8a] hover:bg-[#152a5f] text-white font-semibold py-3 transition-all duration-200 group-hover:shadow-lg"
+                    className="w-full bg-[#1e3a8a] hover:bg-[#152a5f] text-white font-semibold py-3 rounded-md transition-all duration-200 group-hover:shadow-lg"
                   >
-                    Solicitar Diagnóstico
+                    Saiba Mais
                   </Button>
                 </div>
               </div>
 
               {/* Card 2: Mentoria */}
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-[#059669] group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-[#059669] group">
                 <div className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="bg-[#059669] text-white p-3 rounded-lg flex-shrink-0">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-[#059669] text-white p-3 rounded-md flex-shrink-0 group-hover:scale-110 transition-transform">
                       <TrendingUp className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1">Mentoria de Liderança Estratégica</h3>
-                      <p className="text-sm text-gray-600 font-medium">Mentoria para Gestores e Executivos</p>
+                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1 font-montserrat">Mentoria Executiva</h3>
+                      <p className="text-sm text-gray-600">Desenvolvimento para gestores e líderes</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Acelere sua carreira com quem entende a "solidão do líder". Mentoria focada em tomada de decisão, soft skills e inteligência emocional, unindo 22 anos de prática corporativa à visão psicológica.
+                  <p className="text-gray-700 mb-8 leading-relaxed">
+                    Acelere sua carreira com quem entende a "solidão do líder". Mentoria focada em tomada de decisão, soft skills e inteligência emocional.
                   </p>
                   <Button
                     onClick={handleSchedule}
-                    className="w-full bg-[#059669] hover:bg-[#047857] text-white font-semibold py-3 transition-all duration-200 group-hover:shadow-lg"
+                    className="w-full bg-[#059669] hover:bg-[#047857] text-white font-semibold py-3 rounded-md transition-all duration-200 group-hover:shadow-lg"
                   >
-                    Agendar Sessão Estratégica
+                    Saiba Mais
                   </Button>
                 </div>
               </div>
 
               {/* Card 3: Saúde Mental */}
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-[#dc2626] group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-[#dc2626] group">
                 <div className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="bg-[#dc2626] text-white p-3 rounded-lg flex-shrink-0">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-[#dc2626] text-white p-3 rounded-md flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Heart className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1">Psicoterapia e Bem-estar</h3>
-                      <p className="text-sm text-gray-600 font-medium">Saúde Mental (Atendimento Clínico)</p>
+                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1 font-montserrat">Psicoterapia Clínica</h3>
+                      <p className="text-sm text-gray-600">Foco em saúde mental e equilíbrio emocional</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Atendimento clínico especializado para o equilíbrio emocional no ambiente pessoal e profissional. Espaço seguro para o tratamento de ansiedade, estresse e desenvolvimento do autoconhecimento.
+                  <p className="text-gray-700 mb-8 leading-relaxed">
+                    Atendimento clínico especializado para o equilíbrio emocional no ambiente pessoal e profissional. Espaço seguro para o tratamento de ansiedade e estresse.
                   </p>
                   <Button
                     onClick={handleSchedule}
-                    className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-semibold py-3 transition-all duration-200 group-hover:shadow-lg"
+                    className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-semibold py-3 rounded-md transition-all duration-200 group-hover:shadow-lg"
                   >
-                    Marcar Consulta
+                    Saiba Mais
                   </Button>
                 </div>
               </div>
 
               {/* Card 4: Treinamento */}
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-[#f97316] group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-[#f97316] group">
                 <div className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="bg-[#f97316] text-white p-3 rounded-lg flex-shrink-0">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-[#f97316] text-white p-3 rounded-md flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Lightbulb className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1">Desenvolvimento Humano Customizado</h3>
-                      <p className="text-sm text-gray-600 font-medium">Treinamento e Desenvolvimento</p>
+                      <h3 className="text-xl font-bold text-[#1e3a8a] mb-1 font-montserrat">Treinamento & Desenvolvimento</h3>
+                      <p className="text-sm text-gray-600">Workshops e palestras customizadas</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Workshops, palestras e programas de T&D desenhados sob medida para as necessidades da sua equipe. Foco em resultados comportamentais e engajamento de alta performance.
+                  <p className="text-gray-700 mb-8 leading-relaxed">
+                    Workshops, palestras e programas de T&D desenhados sob medida para as necessidades da sua equipe. Foco em resultados comportamentais.
                   </p>
                   <Link href="/treinamentos">
-                    <a className="block w-full bg-[#f97316] hover:bg-[#d96300] text-white font-semibold py-3 rounded-lg text-center transition-all duration-200 group-hover:shadow-lg">
-                      Ver Portfólio de Treinamentos
+                    <a className="block w-full bg-[#f97316] hover:bg-[#d96300] text-white font-semibold py-3 rounded-md text-center transition-all duration-200 group-hover:shadow-lg">
+                      Saiba Mais
                     </a>
                   </Link>
                 </div>
