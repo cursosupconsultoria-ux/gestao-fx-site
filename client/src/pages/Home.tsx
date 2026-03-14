@@ -133,7 +133,7 @@ export default function Home() {
         {/* HERO SECTION */}
         <HeroSection
           title="Bem-vindo à Gestão FX 2.0 - Consultoria de RH"
-          subtitle="Transformamos a forma como sua empresa cuida das pessoas. Consultoria de RH, saúde mental, mentoria executiva e desenvolvimento de equipes. Tudo integrado, prático e acessível para pequenas empresas que querem crescer com solidez. [Versão Atualizada]"
+          subtitle="Transformamos a forma como sua empresa cuida das pessoas. Consultoria de RH, saúde mental, mentoria executiva e desenvolvimento de equipes. Tudo integrado, prático e acessível para pequenas empresas que querem crescer com solidez."
           backgroundImage=""
           primaryCTA={{
             label: 'Agendar Diagnóstico Gratuito',

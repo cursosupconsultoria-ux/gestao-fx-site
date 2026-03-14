@@ -49,13 +49,9 @@ export default function Header({ onScheduleClick }: HeaderProps) {
             onClick={() => handleNavClick('/')}
           >
             <img 
-              src="/logo-gestao-fx.png" 
+              src="/LogoGestão0604transpFX.png" 
               alt="Gestão FX Logo" 
               className="h-14 w-auto object-contain"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = 'https://gestaofx.com.br/logo-gestao-fx.png';
-              }}
             />
           </div>
 
