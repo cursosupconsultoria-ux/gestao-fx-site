@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 
@@ -104,7 +104,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
 
           {/* Menu Mobile - Fluido e Moderno */}
           {mobileMenuOpen && (
-            <nav className="lg:hidden mt-4 pb-4 border-t border-[#e5e7eb] pt-4 space-y-1 animate-in fade-in slide-in-from-top-2 duration-300">
+            <nav className="lg:hidden mt-4 pb-4 border-t border-[#e5e7eb] pt-4 space-y-1">
               {navItems.map((item) => (
                 <button
                   key={item.label}
