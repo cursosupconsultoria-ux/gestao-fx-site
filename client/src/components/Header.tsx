@@ -4,7 +4,7 @@ import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 
 /**
- * Header Component - Gestão FX 2.0
+ * Header Component - Gestão FX 2.1
  * Design: Ultra-Moderno, Fluido e Atrativo
  * - Logo minimalista com novo design
  * - Menu com efeitos de hover sofisticados
