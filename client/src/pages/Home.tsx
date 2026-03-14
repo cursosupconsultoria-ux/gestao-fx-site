@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   const handleServicesClick = () => {
-    setLocation('/servicos');
+    setLocation('/#servicos');
   };
 
   const problems = [
@@ -132,16 +132,16 @@ export default function Home() {
       <main className="flex-1">
         {/* HERO SECTION */}
         <HeroSection
-          title="Consultoria de RH para Pequenas Empresas"
-          subtitle="Conformidade com a NR-1, saúde emocional e gestão de pessoas sem complicação. Atendemos empresas que não têm RH interno, mas precisam cumprir a legislação, reduzir riscos e cuidar das pessoas."
-          backgroundImage="https://private-us-east-1.manuscdn.com/sessionFile/T5u2kkpTgaK3x8g4w2NTqC/sandbox/K8YlyrB9waKCORjiuZs5wh-img-1_1770943788000_na1fn_Z2VzdGFvLWZ4LWluc3RpdHV0aW9uYWw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvVDV1MmtrcFRnYUszeDhnNHcyTlRxQy9zYW5kYm94L0s4WWx5ckI5d2FLQ09Saml1WnM1d2gtaW1nLTFfMTc3MDk0Mzc4ODAwMF9uYTFmbl9aMlZ6ZEdGdkxXWjRMV2x1YzNScGRIVjBhVzl1WVd3LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=rHRSXh5j~Jd0QDAvALY2cgxaefQk7oM7i0zWT2TtIAtgfIk5Yq7uG2S2hgyzBnvYtxGXY3vUE8atF~Wqta37qX442IEf7uSxFJlFXGF34b~FRo0HoU8SGn3xbrMUFrHHB~z~dx6T4q6PhgsgHNqOxBr4PVsTUkXcEnboysPqa8LABb1cg8mRUTJD-vDm4OkfMGAYvbDuBYkKWD1SdgmpbQd8LNXKdv-ukRYzJd5-k~TtaXKU2vMICi5koZo5Uk0SVl9dxWjZSs0ziiSa9eJDHSLkeOIiG4g7YwaZFRt1wcJLtr62nN56S30h-iPVEQFyhzeJtbGT0giPfp3IFKkfmA__"
+          title="Bem-vindo à Gestão FX"
+          subtitle="Transformamos a forma como sua empresa cuida das pessoas. Consultoria de RH, saúde mental, mentoria executiva e desenvolvimento de equipes. Tudo integrado, prático e acessível para pequenas empresas que querem crescer com solidez."
+          backgroundImage=""
           primaryCTA={{
             label: 'Agendar Diagnóstico Gratuito',
             onClick: handleSchedule,
           }}
           secondaryCTA={{
-            label: 'Entender a NR-1 na Prática',
-            onClick: handleNR1Click,
+            label: 'Conheça Nossos Serviços',
+            onClick: () => setLocation('/#servicos'),
           }}
         />
 
@@ -213,7 +213,7 @@ export default function Home() {
         <WaveDivider variant="accent" flip />
 
         {/* HUB DE SERVIÇOS - 4 PILARES */}
-        <section className="py-16 md:py-24 bg-white">
+        <section id="servicos" className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-4 font-montserrat">
