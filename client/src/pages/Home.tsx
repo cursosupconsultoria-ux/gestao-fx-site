@@ -145,6 +145,36 @@ export default function Home() {
           }}
         />
 
+        {/* WORD CLOUD SECTION - Nuvem de Palavras */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#f9fafb]">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              {/* Texto Descritivo */}
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-6 font-montserrat">
+                  Expertise em Múltiplas Dimensões
+                </h2>
+                <p className="text-lg text-[#4b5563] leading-relaxed mb-8">
+                  Nossa abordagem integrada cobre todas as áreas essenciais para o sucesso da sua empresa. De consultoria estratégica a desenvolvimento pessoal, oferecemos soluções holísticas que transformam pessoas e organizações.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <div className="px-4 py-2 bg-[#1e3a8a]/10 text-[#1e3a8a] rounded-full text-sm font-semibold">RH Estratégico</div>
+                  <div className="px-4 py-2 bg-[#059669]/10 text-[#059669] rounded-full text-sm font-semibold">Bem-estar Mental</div>
+                  <div className="px-4 py-2 bg-[#374151]/10 text-[#374151] rounded-full text-sm font-semibold">Desenvolvimento</div>
+                </div>
+              </div>
+              {/* Nuvem de Palavras */}
+              <div className="lg:w-1/2 flex justify-center">
+                <img 
+                  src="/wordcloud-rh.png" 
+                  alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 
+                  className="w-full max-w-md h-auto rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* PROBLEMA REAL SECTION */}
         <section className="py-16 md:py-24 bg-[#fafaf8]">
           <div className="container mx-auto px-4">
