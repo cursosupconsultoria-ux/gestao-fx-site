@@ -84,6 +84,13 @@ export default function Footer({
         {/* Divider */}
         <div className="border-t border-white/10 pt-8 mb-8" />
 
+        {/* Authority Section */}
+        <div className="bg-white/5 rounded-lg p-6 mb-8 border border-white/10">
+          <p className="text-sm text-white/80 leading-relaxed">
+            <strong>Fabrício Xavier</strong> – Psicólogo (CRP 06/193074), Gestor de RH e Especialista em Gestão de Pessoas. Unindo ciência do comportamento e estratégia de negócios há mais de duas décadas.
+          </p>
+        </div>
+
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
