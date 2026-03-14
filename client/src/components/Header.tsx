@@ -49,7 +49,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
             onClick={() => handleNavClick('/')}
           >
             <img 
-              src="/LogoGestão0604transpFX.png" 
+              src="/logo-gestao-fx.png" 
               alt="Gestão FX Logo" 
               className="h-14 w-auto object-contain"
             />
