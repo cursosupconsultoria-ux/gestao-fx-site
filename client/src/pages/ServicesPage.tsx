@@ -1,9 +1,8 @@
-import { Shield, Users, Zap, BookOpen, CheckCircle2 } from 'lucide-react';
+import { Shield, Users, Zap, BookOpen, CheckCircle2, Brain, Heart } from 'lucide-react';
 import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
-import ServiceCard from '@/components/ServiceCard';
 import WaveDivider from '@/components/WaveDivider';
 import { Button } from '@/components/ui/button';
 
@@ -21,36 +20,42 @@ export default function ServicesPage() {
 
   const services = [
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Adequação à NR-1',
-      description: 'Diagnóstico completo, mapeamento de requisitos e implementação de conformidade com a Norma Reguladora 1. Garantimos que sua empresa esteja protegida de multas e passivos.',
-      details: ['Diagnóstico inicial', 'Mapeamento de requisitos', 'Plano de ação', 'Implementação orientada', 'Acompanhamento'],
-    },
-    {
+      id: 'consultoria',
       icon: <Users className="w-8 h-8" />,
-      title: 'Gestão Psicossocial',
-      description: 'Estruturação de programas para identificar e gerenciar riscos psicossociais. Criamos ambientes onde as pessoas prosperam e se sentem valorizadas.',
-      details: ['Avaliação de clima', 'Identificação de riscos', 'Programas de bem-estar', 'Treinamento de lideranças', 'Monitoramento contínuo'],
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
       title: 'Consultoria de RH para PMEs',
       description: 'Suporte estratégico em recrutamento, seleção, desenvolvimento, retenção e gestão de desempenho. Estruturamos processos que funcionam em pequenas empresas.',
       details: ['Estruturação de RH', 'Processos de recrutamento', 'Gestão de desempenho', 'Retenção de talentos', 'Políticas de RH'],
     },
     {
-      icon: <BookOpen className="w-8 h-8" />,
-      title: 'Treinamentos e Desenvolvimento',
-      description: 'Capacitação de lideranças e equipes em temas críticos de RH, segurança, saúde e gestão de pessoas. Programas customizados para sua realidade.',
-      details: ['Diagnóstico de necessidades', 'Desenho de programas', 'Facilitação de treinamentos', 'Materiais customizados', 'Avaliação de impacto'],
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
+      id: 'mentoria',
+      icon: <Brain className="w-8 h-8" />,
       title: 'Mentoria para Gestores',
       description: 'Acompanhamento contínuo de líderes para melhor gestão de pessoas, desenvolvimento de competências e resolução de desafios do dia a dia.',
       details: ['Sessões individuais', 'Coaching de lideranças', 'Desenvolvimento de competências', 'Suporte em decisões', 'Acompanhamento de resultados'],
     },
     {
+      id: 'psicoterapia',
+      icon: <Heart className="w-8 h-8" />,
+      title: 'Psicoterapia Clínica',
+      description: 'Atendimento clínico especializado para o equilíbrio emocional no ambiente pessoal e profissional. Foco em saúde mental, ansiedade e estresse.',
+      details: ['Equilíbrio emocional', 'Saúde mental no trabalho', 'Gestão de estresse', 'Desenvolvimento pessoal', 'Ambiente seguro e ético'],
+    },
+    {
+      id: 'treinamentos-info',
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Treinamentos e Desenvolvimento',
+      description: 'Capacitação de lideranças e equipes em temas críticos de RH, segurança, saúde e gestão de pessoas. Workshops e palestras customizadas.',
+      details: ['Diagnóstico de necessidades', 'Desenho de programas', 'Facilitação de treinamentos', 'Materiais customizados', 'Avaliação de impacto'],
+    },
+    {
+      id: 'nr1',
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Adequação à NR-1',
+      description: 'Diagnóstico completo, mapeamento de requisitos e implementação de conformidade com a Norma Reguladora 1. Proteção contra multas e passivos.',
+      details: ['Diagnóstico inicial', 'Mapeamento de requisitos', 'Plano de ação', 'Implementação orientada', 'Acompanhamento'],
+    },
+    {
+      id: 'politicas',
       icon: <CheckCircle2 className="w-8 h-8" />,
       title: 'Processos e Políticas',
       description: 'Estruturação de processos sólidos e políticas de RH adaptadas à realidade de PMEs. Documentação clara e implementação prática.',
@@ -66,7 +71,7 @@ export default function ServicesPage() {
         {/* HERO */}
         <HeroSection
           title="Nossos Serviços"
-          subtitle="Soluções completas em RH, conformidade legal e gestão psicossocial para pequenas empresas."
+          subtitle="Soluções estratégicas desenhadas para transformar sua gestão de pessoas, saúde mental e desenvolvimento de liderança."
           primaryCTA={{
             label: 'Agendar Diagnóstico Gratuito',
             onClick: handleSchedule,
@@ -87,29 +92,30 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-24">
               {services.map((service, index) => (
                 <div
-                  key={index}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
-                    index % 2 === 1 ? 'lg:grid-cols-2 lg:auto-cols-fr' : ''
+                  key={service.id}
+                  id={service.id}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-mt-32 ${
+                    index % 2 === 1 ? 'lg:grid-cols-2' : ''
                   }`}
                 >
                   {/* Conteúdo */}
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="inline-flex p-3 rounded-lg bg-[#1e3a5f]/10 mb-4">
-                      <div className="text-[#1e3a5f] text-2xl">{service.icon}</div>
+                    <div className="inline-flex p-4 rounded-2xl bg-[#1e3a5f]/5 mb-6">
+                      <div className="text-[#1e3a5f]">{service.icon}</div>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#1e3a5f] mb-4">{service.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                    <h3 className="text-3xl font-bold text-[#1e3a5f] mb-4">{service.title}</h3>
+                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{service.description}</p>
 
                     {/* Detalhes */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-[#1e3a5f] mb-3">O que está incluído:</h4>
-                      <ul className="space-y-2">
+                    <div className="mb-8 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                      <h4 className="font-bold text-[#1e3a5f] mb-4">O que entregamos:</h4>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {service.details.map((detail, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#d4a5a0]" />
+                          <li key={i} className="flex items-center gap-3 text-sm text-gray-600 font-medium">
+                            <CheckCircle2 className="w-5 h-5 text-[#059669] shrink-0" />
                             {detail}
                           </li>
                         ))}
@@ -118,7 +124,7 @@ export default function ServicesPage() {
 
                     <Button
                       onClick={handleSchedule}
-                      className="bg-[#1e3a5f] hover:bg-[#152a47] text-white font-semibold px-6 py-3 transition-all duration-200 hover:shadow-md"
+                      className="bg-[#1e3a8a] hover:bg-[#152a5f] text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                     >
                       Solicitar Proposta
                     </Button>
@@ -126,8 +132,10 @@ export default function ServicesPage() {
 
                   {/* Imagem/Decoração */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="relative h-80 bg-gradient-to-br from-[#d4a5a0]/20 to-[#e8d4c4]/20 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl opacity-20">{service.icon}</div>
+                    <div className="relative h-[400px] bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100 shadow-inner flex items-center justify-center overflow-hidden group">
+                      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
+                      <div className="text-9xl opacity-10 transition-transform duration-500 group-hover:scale-110">{service.icon}</div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-white to-transparent" />
                     </div>
                   </div>
                 </div>
