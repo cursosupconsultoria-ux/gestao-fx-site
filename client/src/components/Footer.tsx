@@ -84,35 +84,6 @@ export default function Footer({
         {/* Divider */}
         <div className="border-t border-white/10 pt-8 mb-8" />
 
-        {/* Authority Section */}
-        <div className="bg-white/5 rounded-lg p-8 mb-8 border border-white/10">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-lg font-semibold text-white mb-4">Sobre Fabrício Xavier</h3>
-            <p className="text-sm text-white/80 leading-relaxed mb-6">
-              <strong>Psicólogo (CRP 06/193074)</strong> | Gestor de RH | Especialista em Gestão de Pessoas
-            </p>
-            <p className="text-sm text-white/80 leading-relaxed mb-6">
-              Com mais de 22 anos de experiência, Fabrício Xavier une a ciência do comportamento humano com a estratégia de negócios. Sua abordagem única combina conhecimento psicológico profundo com soluções práticas de RH, transformando a forma como as empresas gerem pessoas e promovem bem-estar.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10">
-              <a
-                href="https://wa.me/5519984207525?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%u00e3o%20com%20Fabr%C3%ADcio%20Xavier"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
-              >
-                <span>💬 WhatsApp</span>
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
-              >
-                <span>📅 Calendly</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
