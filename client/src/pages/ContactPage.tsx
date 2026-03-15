@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Mail, MessageCircle, Clock, Send } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import HeroSection from '@/components/HeroSection';
+import ContactHeroSection from '@/components/ContactHeroSection';
 import WaveDivider from '@/components/WaveDivider';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -74,9 +74,10 @@ Mensagem: ${formData.message}`;
       <Header onScheduleClick={handleWhatsApp} />
 
       <main className="flex-1">
-        <HeroSection
+        <ContactHeroSection
           title="Entre em Contato"
           subtitle="Estamos aqui para ajudar sua empresa. Fale conosco por email ou WhatsApp!"
+          image="/contact-hero.webp"
           primaryCTA={{
             label: 'Enviar Mensagem',
             onClick: handleWhatsApp,
