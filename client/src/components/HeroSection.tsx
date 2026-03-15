@@ -97,8 +97,8 @@ export default function HeroSection({
             {children}
           </div>
 
-          {/* Right Side - Word Cloud or Decoration */}
-          {imagePosition === 'right' && (
+          {/* Right Side - Word Cloud or Decoration - Hidden for Home */}
+          {imagePosition === 'right' && (cardImage || showWordCloud) && (
             <div className="hidden lg:flex relative h-full items-center justify-center animate-in fade-in zoom-in duration-1000 delay-300">
               {showWordCloud ? (
                 <div className="relative">
@@ -115,17 +115,7 @@ export default function HeroSection({
                     <img src={cardImage} alt="Services illustration" className="w-full h-full object-contain p-4" />
                   </div>
                 </div>
-              ) : (
-                <div className="relative h-96 w-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 rounded-3xl transform rotate-6 shadow-2xl backdrop-blur-3xl border border-white/10" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-3xl transform -rotate-3 border border-white/5" />
-                  <div className="flex items-center justify-center h-full">
-                    <div className="w-64 h-64 bg-blue-500/10 rounded-full flex items-center justify-center border border-white/10">
-                      <div className="w-48 h-48 bg-blue-500/20 rounded-full animate-ping" />
-                    </div>
-                  </div>
-                </div>
-              )}
+              ) : null}
             </div>
           )}
         </div>
