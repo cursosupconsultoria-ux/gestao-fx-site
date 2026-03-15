@@ -141,7 +141,7 @@ export default function Home() {
           }}
           secondaryCTA={{
             label: 'Conheça Nossos Serviços',
-            onClick: () => setLocation('/#servicos'),
+            onClick: () => setLocation('/servicos'),
           }}
           showWordCloud={true}
         />
