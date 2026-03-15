@@ -52,7 +52,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
             <img 
               src="/logo-gestao-fx.png" 
               alt="Gestão FX Logo" 
-              className="h-14 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </div>
 

@@ -143,28 +143,29 @@ export default function Home() {
             label: 'Conheça Nossos Serviços',
             onClick: () => setLocation('/#servicos'),
           }}
+          showWordCloud={true}
         />
 
         {/* WORD CLOUD SECTION - Nuvem de Palavras */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#f9fafb]">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              {/* Texto Descritivo */}
-              <div className="lg:w-1/2">
+            <div className="flex flex-col items-center text-center">
+              {/* Texto Descritivo Centralizado */}
+              <div className="w-full max-w-3xl mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-6 font-montserrat">
                   Expertise em Múltiplas Dimensões
                 </h2>
                 <p className="text-lg text-[#4b5563] leading-relaxed mb-8">
                   Nossa abordagem integrada cobre todas as áreas essenciais para o sucesso da sua empresa. De consultoria estratégica a desenvolvimento pessoal, oferecemos soluções holísticas que transformam pessoas e organizações.
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 justify-center">
                   <div className="px-4 py-2 bg-[#1e3a8a]/10 text-[#1e3a8a] rounded-full text-sm font-semibold">RH Estratégico</div>
                   <div className="px-4 py-2 bg-[#059669]/10 text-[#059669] rounded-full text-sm font-semibold">Bem-estar Mental</div>
                   <div className="px-4 py-2 bg-[#374151]/10 text-[#374151] rounded-full text-sm font-semibold">Desenvolvimento</div>
                 </div>
               </div>
               {/* Nuvem de Palavras */}
-              <div className="lg:w-1/2 flex justify-center">
+              <div className="w-full flex justify-center">
                 <img 
                   src="/wordcloud-rh.png" 
                   alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 

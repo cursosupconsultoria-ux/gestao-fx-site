@@ -20,6 +20,7 @@ interface HeroSectionProps {
   };
   children?: ReactNode;
   imagePosition?: 'left' | 'right';
+  showWordCloud?: boolean;
 }
 
 export default function HeroSection({
@@ -30,6 +31,7 @@ export default function HeroSection({
   secondaryCTA,
   children,
   imagePosition = 'right',
+  showWordCloud = false,
 }: HeroSectionProps) {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0f172a]">
@@ -93,16 +95,28 @@ export default function HeroSection({
             {children}
           </div>
 
-          {/* Right Side Decoration (if no background image or specifically requested) */}
-          {!backgroundImage && imagePosition === 'right' && (
-            <div className="hidden lg:block relative h-96 animate-in fade-in zoom-in duration-1000 delay-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 rounded-3xl transform rotate-6 shadow-2xl backdrop-blur-3xl border border-white/10" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-3xl transform -rotate-3 border border-white/5" />
-              <div className="flex items-center justify-center h-full">
-                 <div className="w-64 h-64 bg-blue-500/10 rounded-full flex items-center justify-center border border-white/10">
-                    <div className="w-48 h-48 bg-blue-500/20 rounded-full animate-ping" />
-                 </div>
-              </div>
+          {/* Right Side - Word Cloud or Decoration */}
+          {imagePosition === 'right' && (
+            <div className="hidden lg:flex relative h-full items-center justify-center animate-in fade-in zoom-in duration-1000 delay-300">
+              {showWordCloud ? (
+                <div className="relative">
+                  <img 
+                    src="/wordcloud-rh.png" 
+                    alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 
+                    className="w-full max-w-md h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="relative h-96 w-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-emerald-500/20 rounded-3xl transform rotate-6 shadow-2xl backdrop-blur-3xl border border-white/10" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-3xl transform -rotate-3 border border-white/5" />
+                  <div className="flex items-center justify-center h-full">
+                    <div className="w-64 h-64 bg-blue-500/10 rounded-full flex items-center justify-center border border-white/10">
+                      <div className="w-48 h-48 bg-blue-500/20 rounded-full animate-ping" />
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
