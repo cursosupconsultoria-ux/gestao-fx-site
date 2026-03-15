@@ -110,8 +110,8 @@ export default function HeroSection({
                 </div>
               ) : cardImage ? (
                 <div className="relative h-96 w-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/10 rounded-3xl transform rotate-3 shadow-2xl backdrop-blur-3xl border border-white/10 animate-float" />
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 h-full flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 rounded-3xl transform rotate-3 shadow-2xl backdrop-blur-3xl border border-white/20 animate-float" />
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/30 h-full flex items-center justify-center bg-white/10">
                     <img src={cardImage} alt="Services illustration" className="w-full h-full object-contain p-4" />
                   </div>
                 </div>
