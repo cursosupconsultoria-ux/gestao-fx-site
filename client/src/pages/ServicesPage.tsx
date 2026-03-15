@@ -74,6 +74,7 @@ export default function ServicesPage() {
           title="Nossos Serviços"
           subtitle="Soluções completas em RH, conformidade legal e gestão psicossocial para pequenas empresas."
           backgroundImage="/services-hero.jpg"
+          cardImage="/wordcloud-rh.png"
           primaryCTA={{
             label: 'Agendar Diagnóstico Gratuito',
             onClick: handleSchedule,

@@ -10,6 +10,7 @@ interface HeroSectionProps {
   title: string;
   subtitle: string;
   backgroundImage?: string;
+  cardImage?: string;
   primaryCTA?: {
     label: string;
     onClick?: () => void;
@@ -27,6 +28,7 @@ export default function HeroSection({
   title,
   subtitle,
   backgroundImage,
+  cardImage,
   primaryCTA,
   secondaryCTA,
   children,
@@ -105,6 +107,13 @@ export default function HeroSection({
                     alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 
                     className="w-full max-w-2xl h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 object-contain"
                   />
+                </div>
+              ) : cardImage ? (
+                <div className="relative h-96 w-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/10 rounded-3xl transform rotate-3 shadow-2xl backdrop-blur-3xl border border-white/10 animate-float" />
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 h-full flex items-center justify-center">
+                    <img src={cardImage} alt="Services illustration" className="w-full h-full object-contain p-4" />
+                  </div>
                 </div>
               ) : (
                 <div className="relative h-96 w-full">
