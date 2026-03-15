@@ -14,8 +14,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
   const navItems = [
     { label: 'Início', href: '/' },
     { label: 'Serviços', href: '/servicos' },
-    { label: 'Cases', href: '/cases' },
-    { label: 'Investimento', href: '/investimento' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Novidades RH', href: '/novidades-rh' },
   ];
 

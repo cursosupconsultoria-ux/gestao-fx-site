@@ -195,3 +195,90 @@
     }
   }
 }
+
+/* Custom Animations for Hero Section */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.8s ease-out;
+}
+
+.animate-gradient-shift {
+  animation: gradientShift 6s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-float {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  @apply transition-all duration-300;
+}
+
+/* Disable transitions for animations to prevent conflicts */
+.animate-fade-in-up,
+.animate-slide-in-left,
+.animate-zoom-in,
+.animate-gradient-shift,
+.animate-float {
+  @apply transition-none;
+}

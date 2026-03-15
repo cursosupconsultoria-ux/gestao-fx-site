@@ -132,9 +132,9 @@ export default function Home() {
       <main className="flex-1">
         {/* HERO SECTION */}
         <HeroSection
-          title="Bem-vindo à Gestão FX"
-          subtitle="Transformamos a forma como sua empresa cuida das pessoas. Consultoria de RH, saúde mental, mentoria executiva e desenvolvimento de equipes. Tudo integrado, prático e acessível para pequenas empresas que querem crescer com solidez."
-          backgroundImage=""
+          title="Gestão Estratégica de Pessoas"
+          subtitle="Transformamos a forma como sua empresa cuida das pessoas com consultoria de RH, saúde mental e mentoria executiva. Soluções práticas e acessíveis para empresas que buscam crescimento sólido e humano."
+          backgroundImage="/hero-bg.jpg"
           primaryCTA={{
             label: 'Agendar Diagnóstico Gratuito',
             onClick: handleSchedule,
