@@ -156,7 +156,7 @@ export default function Home() {
                   Expertise em Múltiplas Dimensões
                 </h2>
                 <p className="text-lg text-[#4b5563] leading-relaxed mb-8">
-                  Nossa abordagem integrada cobre todas as áreas essenciais para o sucesso da sua empresa. De consultoria estratégica a desenvolvimento pessoal, oferecemos soluções holísticas que transformam pessoas e organizações.
+                  Nossa abordagem integrada cobre todas as áreas essenciais para o sucesso da sua empresa. De consultoria estratégica a desenvolvimento pessoal, oferecemos soluções que transformam pessoas e organizações.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center">
                   <div className="px-4 py-2 bg-[#1e3a8a]/10 text-[#1e3a8a] rounded-full text-sm font-semibold">RH Estratégico</div>
