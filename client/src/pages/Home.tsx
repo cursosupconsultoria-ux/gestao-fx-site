@@ -143,7 +143,6 @@ export default function Home() {
             label: 'Conheça Nossos Serviços',
             onClick: () => setLocation('/servicos'),
           }}
-          showWordCloud={true}
         />
 
         {/* EXPERTISE SECTION - Expertise em Múltiplas Dimensões */}
@@ -163,6 +162,14 @@ export default function Home() {
                   <div className="px-4 py-2 bg-[#059669]/10 text-[#059669] rounded-full text-sm font-semibold">Bem-estar Mental</div>
                   <div className="px-4 py-2 bg-[#374151]/10 text-[#374151] rounded-full text-sm font-semibold">Desenvolvimento</div>
                 </div>
+              </div>
+              {/* Nuvem de Palavras */}
+              <div className="w-full mt-16 flex justify-center animate-in fade-in zoom-in duration-700">
+                <img 
+                  src="/wordcloud-rh.png" 
+                  alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 
+                  className="w-full max-w-2xl h-auto rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                />
               </div>
             </div>
           </div>
