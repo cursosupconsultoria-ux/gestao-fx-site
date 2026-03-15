@@ -13,8 +13,10 @@ export default function Header({ onScheduleClick }: HeaderProps) {
 
   const navItems = [
     { label: 'Início', href: '/' },
+    { label: 'Serviços', href: '/servicos' },
+    { label: 'Cases', href: '/cases' },
+    { label: 'Investimento', href: '/investimento' },
     { label: 'Novidades RH', href: '/novidades-rh' },
-    { label: 'Serviços', href: '/#servicos' },
   ];
 
   const handleNavClick = (href: string) => {
