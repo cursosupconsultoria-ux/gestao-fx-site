@@ -146,12 +146,12 @@ export default function Home() {
           showWordCloud={true}
         />
 
-        {/* WORD CLOUD SECTION - Nuvem de Palavras */}
+        {/* EXPERTISE SECTION - Expertise em Múltiplas Dimensões */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#f9fafb]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               {/* Texto Descritivo Centralizado */}
-              <div className="w-full max-w-3xl mb-12">
+              <div className="w-full max-w-3xl">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-6 font-montserrat">
                   Expertise em Múltiplas Dimensões
                 </h2>
@@ -163,14 +163,6 @@ export default function Home() {
                   <div className="px-4 py-2 bg-[#059669]/10 text-[#059669] rounded-full text-sm font-semibold">Bem-estar Mental</div>
                   <div className="px-4 py-2 bg-[#374151]/10 text-[#374151] rounded-full text-sm font-semibold">Desenvolvimento</div>
                 </div>
-              </div>
-              {/* Nuvem de Palavras */}
-              <div className="w-full flex justify-center">
-                <img 
-                  src="/wordcloud-rh.png" 
-                  alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 
-                  className="w-full max-w-md h-auto rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
-                />
               </div>
             </div>
           </div>

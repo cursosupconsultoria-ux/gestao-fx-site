@@ -103,7 +103,7 @@ export default function HeroSection({
                   <img 
                     src="/wordcloud-rh.png" 
                     alt="Nuvem de Palavras - Temas de RH e Desenvolvimento" 
-                    className="w-full max-w-md h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 object-contain"
+                    className="w-full max-w-2xl h-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 object-contain"
                   />
                 </div>
               ) : (
