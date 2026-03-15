@@ -25,36 +25,42 @@ export default function ServicesPage() {
       title: 'Adequação à NR-1',
       description: 'Diagnóstico completo, mapeamento de requisitos e implementação de conformidade com a Norma Reguladora 1. Garantimos que sua empresa esteja protegida de multas e passivos.',
       details: ['Diagnóstico inicial', 'Mapeamento de requisitos', 'Plano de ação', 'Implementação orientada', 'Acompanhamento'],
+      image: '/service-nr1.jpg'
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: 'Gestão Psicossocial',
       description: 'Estruturação de programas para identificar e gerenciar riscos psicossociais. Criamos ambientes onde as pessoas prosperam e se sentem valorizadas.',
-      details: ['Avaliação de clima', 'Identificação de riscos', 'Programas de bem-estar', 'Treinamento de lideranças', 'Monitoramento contínuo'],
+      details: ['Avaliação de clima', 'Identificação de risks', 'Programas de bem-estar', 'Treinamento de lideranças', 'Monitoramento contínuo'],
+      image: '/service-psicossocial.png'
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Consultoria de RH para PMEs',
       description: 'Suporte estratégico em recrutamento, seleção, desenvolvimento, retenção e gestão de desempenho. Estruturamos processos que funcionam em pequenas empresas.',
       details: ['Estruturação de RH', 'Processos de recrutamento', 'Gestão de desempenho', 'Retenção de talentos', 'Políticas de RH'],
+      image: '/service-consultoria.jpg'
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
       title: 'Treinamentos e Desenvolvimento',
       description: 'Capacitação de lideranças e equipes em temas críticos de RH, segurança, saúde e gestão de pessoas. Programas customizados para sua realidade.',
       details: ['Diagnóstico de necessidades', 'Desenho de programas', 'Facilitação de treinamentos', 'Materiais customizados', 'Avaliação de impacto'],
+      image: '/service-treinamento.jpg'
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: 'Mentoria para Gestores',
       description: 'Acompanhamento contínuo de líderes para melhor gestão de pessoas, desenvolvimento de competências e resolução de desafios do dia a dia.',
       details: ['Sessões individuais', 'Coaching de lideranças', 'Desenvolvimento de competências', 'Suporte em decisões', 'Acompanhamento de resultados'],
+      image: '/service-mentoria.jpg'
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,
       title: 'Processos e Políticas',
       description: 'Estruturação de processos sólidos e políticas de RH adaptadas à realidade de PMEs. Documentação clara e implementação prática.',
       details: ['Mapeamento de processos', 'Desenho de políticas', 'Documentação', 'Treinamento de equipes', 'Implementação'],
+      image: '/service-processos.webp'
     },
   ];
 
@@ -67,6 +73,7 @@ export default function ServicesPage() {
         <HeroSection
           title="Nossos Serviços"
           subtitle="Soluções completas em RH, conformidade legal e gestão psicossocial para pequenas empresas."
+          backgroundImage="/services-hero.jpg"
           primaryCTA={{
             label: 'Agendar Diagnóstico Gratuito',
             onClick: handleSchedule,
@@ -125,9 +132,17 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Imagem/Decoração */}
-                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="relative h-80 bg-gradient-to-br from-[#d4a5a0]/20 to-[#e8d4c4]/20 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl opacity-20">{service.icon}</div>
+                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} animate-in fade-in zoom-in duration-700`}>
+                    <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl border border-border group">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/40 to-transparent opacity-60" />
+                      <div className="absolute bottom-4 right-4 text-white opacity-20 group-hover:opacity-40 transition-opacity">
+                        {service.icon}
+                      </div>
                     </div>
                   </div>
                 </div>
